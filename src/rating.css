@@ -1,9 +1,11 @@
 .checked {
-    color: orange;
+  color: gold;
     
   }
   
   .rating {
-    display: flex;
+  display: flex;
+  color: black;
   }
+  
   

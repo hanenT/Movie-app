@@ -3,9 +3,16 @@ import MovieCard from './MovieCard.js';
 import AddMovie from './addmovie-list.js';
 import './App.css';
 import Rating from './rating';
+import List from './list.js';
+import WithLoading from './WithLoading.js';
+
+
+const ListWithLoading = WithLoading(List);
 
 class App extends Component {
   state={
+    loading: false,
+    repos: null,
     movies: [
       {
         
@@ -52,6 +59,14 @@ class App extends Component {
     filter: '',
     indexChecked: -1
   }
+  componentDidMount() {
+    this.setState({ loading: true });
+    fetch(`https://api.github.com/users/farskid/repos`)
+      .then(json => json.json())
+      .then(repos => {
+        this.setState({ loading: false, repos: repos });
+      });
+  }
 
   // let newMovies = this.state.movies
     // newMovies.push(movie)
@@ -85,7 +100,9 @@ class App extends Component {
   render() {
     const { movies, filter,indexChecked} = this.state
     return (
+     
       <div className="app">
+       <ListWithLoading isLoading={this.state.loading} repos={this.state.repos} />
       <input className="search" onChange={(e) => this.onFilterChange(e.target.value)} //onChange={(e) => this.setSearchTerm(e.target.value)}
        value={filter} type="text" placeholder="search" />
        <div className="rating-filter">
