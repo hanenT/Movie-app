@@ -1,0 +1,9 @@
+.search{
+  border: salmon solid 4px;
+  margin-left: 400px;
+  height: 50px;
+  width: 500px;
+}
+.rating-filter{
+  color: goldenrod;
+}

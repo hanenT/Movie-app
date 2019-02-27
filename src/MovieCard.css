@@ -1,0 +1,42 @@
+.movie-card{
+    width: 400px;
+}
+.movies{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: black;
+    margin-top: 100px;
+}
+.description{
+    color: salmon;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    font-size: 18px;
+    margin-bottom: 30px;
+    border-bottom: salmon solid 2px;
+}
+.app{
+    height: 100%;
+    width: 100%;
+}
+.add-movie{
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
+.movie-rating{
+    color: gold; 
+    margin-left: 220px;
+}
+.delete-btn{
+    width: 10px;
+    color: salmon;
+    margin-left:150px;
+    margin-top: -20px;
+    padding-bottom: 20px;
+}

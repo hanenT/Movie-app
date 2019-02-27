@@ -1,0 +1,9 @@
+.checked {
+    color: orange;
+    
+  }
+  
+  .rating {
+    display: flex;
+  }
+  
